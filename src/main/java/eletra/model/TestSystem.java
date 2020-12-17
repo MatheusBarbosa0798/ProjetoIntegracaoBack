@@ -12,7 +12,7 @@ import javax.persistence.TypedQuery;
 public class TestSystem {
 	
 	private static EntityManagerFactory ENTITY_MANAGER_FACTORY = 
-			Persistence.createEntityManagerFactory("databaseTEST");
+			Persistence.createEntityManagerFactory("ProjetoIntegracaoBack");
 
 
 	public static void main(String[] args) {
@@ -49,7 +49,7 @@ public class TestSystem {
 		
 	}
 	
-	public static void getProduct(int id) {
+	public static Products getProduct(int id) {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		String query = "SELECT p FROM Products p WHERE p.id = :id";
 		
@@ -58,7 +58,7 @@ public class TestSystem {
 		Products produ =  null;
 		try {
 			produ = tq.getSingleResult();
-			System.out.println(produ.getLinha()+""+produ.getCategoria()+""+produ.getModelo());	
+			//System.out.println(produ.getLinha()+""+produ.getCategoria()+""+produ.getModelo());	
 		}
 		catch (NoResultException ex) {
 			ex.printStackTrace();
@@ -66,7 +66,7 @@ public class TestSystem {
 		finally {
 			em.close();
 		}
-	
+		return produ;
 	}
 	
 	public static void getProducts() {
