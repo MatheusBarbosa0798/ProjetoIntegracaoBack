@@ -65,7 +65,7 @@ public class TestSystem {
 		}
 		finally {
 			em.close();
-		}
+		} 
 		return produ;
 	}
 	

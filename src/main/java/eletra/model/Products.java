@@ -57,6 +57,9 @@ public class Products implements Serializable {
 		this.modelo = modelo;
 	}
 	
-	
+    @Override
+    public String toString() {
+        return "Product: " + this.id + ", " + this.categoria + ", " + this.modelo;
+    } 
 	
 }
