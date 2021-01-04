@@ -2,6 +2,8 @@ package eletra.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
  
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 @Table(name = "medidores")
 public class Products {
  
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
      
@@ -25,8 +27,7 @@ public class Products {
     public Products() {
     }
  
-    public Products(int id, String linha, String categoria, String modelo) {
-        this.id = id;
+    public Products(String linha, String categoria, String modelo) {
         this.linha = linha;
         this.categoria = categoria;
         this.modelo = modelo;
