@@ -8,7 +8,8 @@ public class App {
     public static void main(String[] args) {
     	 SystemService systemService = new SystemService();
          System.out.println("*** Service - start ***");
-        
+         System.out.println("*** Persist Mode ***");
+
          Products medidor1 = new Products("x","y","z");
          systemService.persist(medidor1);
          
