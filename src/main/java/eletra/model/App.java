@@ -10,8 +10,8 @@ public class App {
          System.out.println("*** Service - start ***");
          System.out.println("*** Persist Mode ***");
 
-         Products medidor1 = new Products("x","y","z");
-         systemService.persist(medidor1);
+       //  Products medidor1 = new Products("x","y","z");
+        // systemService.persist(medidor1);
          
          
          System.out.println("Number of products is now " + systemService.findAll().size() + ".");
